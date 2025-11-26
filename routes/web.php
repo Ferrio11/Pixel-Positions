@@ -20,6 +20,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [JobController::class, 'index']);
+Route::get('/users-list', function () {
+    return view('users.index', [
+        'users' => \App\Models\User::all()
+    ]);
+});
 
 Route::get('/jobs/{job:id}/pdf', [PDFController::class, 'generatePDF']);
 

@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/users', [\App\Http\Controllers\Api\UserController::class, 'index']);
+Route::get('/jobs', [\App\Http\Controllers\Api\JobController::class, 'index']);
+Route::delete('/jobs/{id}', [\App\Http\Controllers\Api\JobController::class, 'destroy']);

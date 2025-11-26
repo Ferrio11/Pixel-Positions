@@ -30,6 +30,7 @@
             <a href="#">Careers</a>
             <a href="#">Salaries</a>
             <a href="#">Companies</a>
+            <a href="/users-list">Users</a>
         </div>
         <div class="flex gap-x-4">
             @auth
